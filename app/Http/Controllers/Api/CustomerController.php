@@ -28,7 +28,11 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Customer::create([
+            'name' => $request->name,
+            'tel' => $request->tel,
+            'is_favorite' => $request->is_favorite,
+        ]);
     }
 
     /**
